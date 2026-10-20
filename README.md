@@ -9,6 +9,8 @@ CSVに収録した賃金データを、Streamlitで可視化するアプリで�
 - 年齢別の賃金・賞与の推移
 - 産業大分類ごとの賃金比較
 
+グラフはPandasでデータを結合・集計し、地図をPyDeck、その他の可視化をPlotly Expressで表示しています。
+
 ## 起動
 
 ```bash
@@ -17,9 +19,3 @@ source .venv/bin/activate
 python -m pip install streamlit pandas numpy matplotlib pillow pydeck plotly
 streamlit run 2-3.py
 ```
-
-## 地図表示に必要なファイル
-
-賃金データは `csv_data/` にあります。地図用の `pref_lat_lon.csv` はリポジトリに入っていないため、起動前にルートディレクトリへ用意してください。列は `pref_name`、`lat`、`lon` を使います。
-
-グラフはPandasでデータを結合・集計し、地図をPyDeck、その他の可視化をPlotly Expressで表示しています。
